@@ -36,7 +36,15 @@ html{scroll-behavior:smooth}
 .support-coffee{width:43px;height:43px;display:flex;align-items:center;justify-content:center;border-radius:14px;background:#eddbc8;color:#925d40;flex-shrink:0}
 .support-coffee svg{width:24px;height:24px}
 .exam-label{display:block;font-size:14px;font-weight:600;margin:24px 0 8px}
-#examCount{display:block;width:100%;max-width:340px;background:#eee7ed;color:var(--ink);border:0;padding:13px;border-radius:10px;font:inherit;font-size:14px}
+#examCount{display:block;width:100%;max-width:380px;background:#eee7ed;color:var(--ink);border:0;padding:14px;border-radius:10px;font:inherit;font-size:16px;min-height:48px}
+.home-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.ongoing-attempt{padding:21px;background:#e5eadf;border-radius:16px;margin:22px 0}
+.ongoing-attempt>strong{font-size:16px}
+.ongoing-attempt p{margin:10px 0;font-size:14px}
+.ongoing-attempt .primary{margin-top:10px}
+.ongoing-attempt .small{font-size:12px;margin-top:14px}
+.exam-home-button{display:inline-flex;align-items:center;min-height:44px;margin-bottom:18px}
+.start-selected{margin-top:17px}
 footer{display:block;text-align:left}
 .footer-main{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .analytics-settings{display:inline-block;background:transparent;color:var(--muted);padding:5px 0;margin-top:12px;font-size:12px;text-decoration:underline;text-underline-offset:4px}
@@ -65,6 +73,9 @@ footer{display:block;text-align:left}
 #casualStage{min-height:0}
 .consent-box{right:16px;bottom:16px;padding:20px}
 .footer-main{flex-direction:column;align-items:flex-start;gap:7px}
+#examCount{max-width:none}
+.home-actions button{flex:1}
+.exam-home-button{width:100%;justify-content:center}
 }
 @media(max-width:400px){
 .casual-menu .modes{grid-template-columns:1fr}
@@ -105,10 +116,11 @@ html{scroll-behavior:auto}
         <p>Τεχνικός Αισθητικής Τέχνης και Μακιγιάζ</p>
         <small>Ανεπίσημο βοήθημα προετοιμασίας</small>
       </div>
+
       <nav class="modes" aria-label="Προετοιμασία πιστοποίησης">
         <button class="mode exam" data-mode="exam" aria-pressed="true">
           <span class="mode-icon" aria-hidden="true">▤</span>
-          <span><strong>Εξάσκηση ΕΟΠΠΕΠ</strong><small>10, 20 ή 30 ερωτήσεις</small></span>
+          <span><strong>Εξάσκηση ΕΟΠΠΕΠ</strong><small>Αρχική και επιλογή προσπάθειας</small></span>
         </button>
         <button class="mode study" data-mode="study" aria-pressed="false">
           <span class="mode-icon" aria-hidden="true">▧</span>
@@ -119,6 +131,7 @@ html{scroll-behavior:auto}
           <span><strong>Το αρχείο μου</strong><small>Προσπάθειες και αποτελέσματα</small></span>
         </button>
       </nav>
+
       <section class="notebook" aria-labelledby="progressTitle">
         <span class="eyebrow" id="progressTitle">Η ΠΡΟΟΔΟΣ ΜΟΥ</span>
         <div class="stats">
@@ -230,8 +243,18 @@ html{scroll-behavior:auto}
       <h2 id="revisionTitle">Επέστρεψε σε όσα χρειάζονται εξάσκηση.</h2>
     </div>
     <div class="revision-options">
-      <button data-go="study"><span aria-hidden="true">▧</span><strong>Μελέτη απαντήσεων</strong><small>Διάβασε και κράτησε σημειώσεις.</small><b aria-hidden="true">↗</b></button>
-      <button data-go="archive"><span aria-hidden="true">↺</span><strong>Προηγούμενες προσπάθειες</strong><small>Δες ξανά τις επιλογές και τις διορθώσεις.</small><b aria-hidden="true">↗</b></button>
+      <button data-go="study">
+        <span aria-hidden="true">▧</span>
+        <strong>Μελέτη απαντήσεων</strong>
+        <small>Διάβασε και κράτησε σημειώσεις.</small>
+        <b aria-hidden="true">↗</b>
+      </button>
+      <button data-go="archive">
+        <span aria-hidden="true">↺</span>
+        <strong>Προηγούμενες προσπάθειες</strong>
+        <small>Δες ξανά τις επιλογές και τις διορθώσεις.</small>
+        <b aria-hidden="true">↗</b>
+      </button>
     </div>
   </section>
 </main>
@@ -243,7 +266,10 @@ html{scroll-behavior:auto}
       <path d="M17 9h2a3 3 0 0 1 0 6h-2M4 22h15M9 3v2M13 2v3"/>
     </svg>
   </span>
-  <div><h2 id="supportTitle">Στήριξε το BEAUTY CHALLENGE.</h2><p>Ένας καφές για το επόμενο κεφάλαιο.</p></div>
+  <div>
+    <h2 id="supportTitle">Στήριξε το BEAUTY CHALLENGE.</h2>
+    <p>Ένας καφές για το επόμενο κεφάλαιο.</p>
+  </div>
   <a class="donate" href="https://revolut.me/konstajmq6" target="_blank" rel="noopener noreferrer">Κέρασε έναν καφέ ↗</a>
 </section>
 
@@ -252,7 +278,7 @@ html{scroll-behavior:auto}
     <span>By Threepoint Studio ATH</span>
     <span>Special thanks to Loula Rou <span class="heart" aria-label="με αγάπη">♡</span></span>
   </div>
-  <button class="analytics-settings" id="analyticsSettings" type="button">Ρυθμίσεις απορρήτου</button>
+  <button class="analytics-settings" id="analyticsSettings" type="button">Ρυθμίσεις cookies</button>
 </footer>
 </div>
 
@@ -265,10 +291,20 @@ html{scroll-behavior:auto}
   </div>
 </dialog>
 
+<dialog id="newExamDialog" aria-labelledby="newExamTitle">
+  <h2 id="newExamTitle">Νέα προσπάθεια;</h2>
+  <p id="newExamText"></p>
+  <div class="actions">
+    <button class="quiet" id="keepCurrentExam">Κράτησε την τρέχουσα</button>
+    <button class="primary" id="replaceCurrentExam">Ξεκίνα νέα</button>
+  </div>
+</dialog>
+
 <aside class="consent-box" id="analyticsConsent" aria-labelledby="analyticsTitle" hidden>
-  <h2 id="analyticsTitle" tabindex="-1">Στατιστικά επισκέψεων</h2>
+  <h2 id="analyticsTitle" tabindex="-1">Cookies & στατιστικά</h2>
   <p>Επιτρέπεις τη χρήση Google Analytics και cookies για τη μέτρηση επισκέψεων και χρήσης της σελίδας;</p>
-  <p>Τα quiz λειτουργούν και χωρίς αποδοχή. Αλλάζεις την επιλογή σου από τις «Ρυθμίσεις απορρήτου».</p>
+  <p>Τα quiz λειτουργούν και χωρίς αποδοχή. Η επιλογή αφορά τα στατιστικά· η πρόοδος αποθηκεύεται ξεχωριστά στον browser σου.</p>
+  <p>Μπορείς να αλλάξεις την επιλογή σου από τις «Ρυθμίσεις cookies» στο κάτω μέρος.</p>
   <p><a href="https://policies.google.com/technologies/partner-sites?hl=el" target="_blank" rel="noopener noreferrer">Πώς χρησιμοποιεί τα δεδομένα η Google ↗</a></p>
   <p class="consent-status" id="analyticsStatus"></p>
   <div class="consent-actions">
@@ -276,5 +312,162 @@ html{scroll-behavior:auto}
     <button id="acceptAnalytics" type="button">Αποδοχή</button>
   </div>
 </aside>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const stage=document.querySelector('#stage');
+  const baseRender=render;
+  let examHome=true;
+
+  if(![10,20,30].includes(state.examCount))state.examCount=20;
+
+  const focus=()=>{
+    const title=stage.querySelector('h2');
+    if(title){
+      title.tabIndex=-1;
+      title.focus({preventScroll:true});
+    }
+  };
+
+  render=function(){
+    baseRender();
+    if(state.mode!=='exam')return;
+
+    const s=state.sessions.exam;
+
+    if(examHome){
+      const answered=s?s.answers.filter(a=>a!==null).length:0;
+
+      stage.innerHTML=`
+        <div class="intro">
+          <span class="tag">Προετοιμασία ΕΟΠΠΕΠ</span>
+          <h2 tabindex="-1">Εξάσκηση για την πιστοποίηση.</h2>
+
+          ${s?(s.done?`
+            <div class="ongoing-attempt">
+              <p>Η προηγούμενη προσπάθεια ολοκληρώθηκε:
+                <strong>${s.correct} / ${s.ids.length} σωστές</strong>
+              </p>
+              <button class="quiet" data-exam-nav="resume">Δες τη διόρθωση</button>
+            </div>`:`
+            <div class="ongoing-attempt">
+              <strong>Προσπάθεια σε εξέλιξη</strong>
+              <p>${answered} / ${s.ids.length} απαντημένες ερωτήσεις</p>
+              <p>Απομένουν
+                <span class="timer" id="timer" aria-label="Υπόλοιπος χρόνος">${clockText(s)}</span>
+              </p>
+              <button class="primary" data-exam-nav="resume">Συνέχεια προσπάθειας →</button>
+              <p class="small muted">Ο χρόνος συνεχίζει. Οι απαντήσεις σου έχουν κρατηθεί.</p>
+            </div>`):''}
+
+          <label class="exam-label" for="examCount">Νέα προσπάθεια</label>
+          <select id="examCount">
+            ${[10,20,30].map(n=>`
+              <option value="${n}" ${state.examCount===n?'selected':''}>
+                ${n} ερωτήσεις / ${n*1.5} λεπτά
+              </option>`).join('')}
+          </select>
+          <button class="primary start-selected" data-exam-nav="new">Ξεκίνα νέα προσπάθεια →</button>
+          <p class="small muted">Η μορφή και ο χρόνος αφορούν την εξάσκηση της εφαρμογής.</p>
+
+          <div class="home-actions">
+            <button class="quiet" data-exam-nav="study">Μελέτη</button>
+            <button class="quiet" data-exam-nav="archive">Το αρχείο μου</button>
+          </div>
+        </div>`;
+    }else if(s){
+      stage.insertAdjacentHTML('afterbegin',
+        '<button class="quiet exam-home-button" data-exam-nav="home">← Αρχική ΕΟΠΠΕΠ</button>');
+    }
+  };
+
+  stage.addEventListener('click',e=>{
+    const b=e.target.closest('button');
+    if(!b||b.disabled)return;
+
+    if(b.dataset.action==='start')examHome=false;
+    if(b.dataset.action==='restart')examHome=true;
+
+    const nav=b.dataset.examNav;
+    if(!nav)return;
+
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    if(nav==='new'){
+      if(state.sessions.exam&&!state.sessions.exam.done){
+        document.querySelector('#newExamText').textContent=
+          'Η τρέχουσα προσπάθεια θα ολοκληρωθεί και θα αποθηκευτεί στο αρχείο. Οι αναπάντητες ερωτήσεις θα μετρήσουν ως μη σωστές. Να ξεκινήσει νέα με '+state.examCount+' ερωτήσεις;';
+        document.querySelector('#newExamDialog').showModal();
+      }else{
+        startSelected();
+      }
+      return;
+    }
+
+    if(nav==='home'){
+      examHome=true;
+      state.mode='exam';
+    }
+    if(nav==='resume'){
+      examHome=false;
+      state.mode='exam';
+    }
+    if(nav==='study'||nav==='archive'){
+      examHome=true;
+      state.mode=nav;
+    }
+
+    save();
+    render();
+    focus();
+  },true);
+
+  stage.addEventListener('change',e=>{
+    if(e.target.id==='examCount'&&[10,20,30].includes(Number(e.target.value))){
+      state.examCount=Number(e.target.value);
+      save();
+    }
+  });
+
+  function startSelected(){
+    const previous=state.sessions.exam;
+    if(previous&&!previous.done)finish(previous);
+    state.mode='exam';
+    state.sessions.exam=create('exam');
+    examHome=false;
+    save();
+    render();
+    focus();
+  }
+
+  document.querySelector('#keepCurrentExam').addEventListener('click',()=>{
+    document.querySelector('#newExamDialog').close();
+  });
+
+  document.querySelector('#replaceCurrentExam').addEventListener('click',()=>{
+    document.querySelector('#newExamDialog').close();
+    startSelected();
+  });
+
+  document.querySelectorAll('[data-mode="exam"]').forEach(b=>{
+    b.addEventListener('click',()=>{examHome=true},true);
+  });
+
+  document.querySelectorAll('.brand').forEach(a=>{
+    a.addEventListener('click',e=>{
+      if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;
+      e.preventDefault();
+      examHome=true;
+      state.mode='exam';
+      save();
+      render();
+      window.scrollTo({top:0,behavior:'auto'});
+    });
+  });
+
+  render();
+});
+</script>
 </body>
 </html>
