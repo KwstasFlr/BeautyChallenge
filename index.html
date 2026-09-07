@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#603c51">
+<title>BEAUTY CHALLENGE — Προετοιμασία ΕΟΠΠΕΠ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+<style>
+html{scroll-behavior:smooth}
+.top-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.donate-top{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:13px;font-weight:600;color:var(--plum);padding:8px 11px;border-radius:12px}
+.coffee-dot{display:inline-flex;align-items:center;justify-content:center;width:29px;height:29px;border-radius:50%;background:#eddbc8;color:#925d40;flex-shrink:0}
+.coffee-dot svg{width:17px;height:17px}
+.donate-top:hover{background:#ece2e8}
+.casual-section{margin-top:88px;scroll-margin-top:25px}
+.casual-heading{max-width:650px;margin-bottom:27px}
+.casual-heading h2{font-size:30px;margin:10px 0}
+.casual-heading p{color:var(--muted);font-size:14px}
+.casual-workspace{display:grid;grid-template-columns:310px minmax(0,1fr);gap:45px;align-items:start}
+.casual-menu{background:var(--white);padding:23px 18px;border-radius:22px}
+.casual-menu h3{font-size:22px;margin:0 0 18px}
+.casual-menu .modes{grid-template-columns:1fr;gap:14px}
+.casual-menu .mode{width:100%}
+.casual-menu .mode:first-child{grid-column:auto}
+.casual-menu>p{font-size:12px;color:var(--muted);margin:20px 4px 0}
+#casualStage{min-height:380px;scroll-margin-top:25px}
+#support{scroll-margin-top:35px}
+.support-coffee{width:43px;height:43px;display:flex;align-items:center;justify-content:center;border-radius:14px;background:#eddbc8;color:#925d40;flex-shrink:0}
+.support-coffee svg{width:24px;height:24px}
+@media(max-width:1000px){
+.casual-workspace{grid-template-columns:270px minmax(0,1fr);gap:25px}
+}
+@media(max-width:760px){
+.masthead{align-items:flex-start}
+.top-actions{gap:7px;max-width:160px}
+.donate-top{font-size:12px;padding:5px 8px}
+.casual-section{margin-top:65px}
+.casual-heading h2{font-size:27px}
+.casual-workspace{grid-template-columns:1fr;gap:22px}
+.casual-menu .modes{grid-template-columns:repeat(2,minmax(0,1fr))}
+.casual-menu{padding:20px 16px}
+#casualStage{min-height:0}
+}
+@media(max-width:400px){
+.casual-menu .modes{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#stage">Πήγαινε στην εξάσκηση</a>
+<div class="page">
+
+<header class="masthead">
+  <a class="brand" href="./index.html">
+    <span class="brand-icon" aria-hidden="true">✳</span>
+    <span>BEAUTY<br>CHALLENGE<small>Threepoint Studio ATH</small></span>
+  </a>
+  <nav class="top-actions" aria-label="Χρήσιμοι σύνδεσμοι">
+    <a class="official" href="https://www.eoppep.gr/phocadownload/themata2017/24_TEXNIKOS%20AISTHHTIKHS%20TEXNHS%20KAI%20MAKIGIAZ.pdf" target="_blank" rel="noopener noreferrer">Επίσημα θέματα ↗</a>
+    <a class="donate-top" href="#support" aria-label="Donate — πήγαινε στην ενότητα στήριξης">
+      <span class="coffee-dot" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 8h12v6a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5V8Z"/>
+          <path d="M17 9h2a3 3 0 0 1 0 6h-2M4 22h15M9 3v2M13 2v3"/>
+        </svg>
+      </span>
+      Donate
+    </a>
+  </nav>
+</header>
+
+<main>
+  <div class="workspace">
+    <aside class="sidebar">
+      <div class="welcome">
+        <span class="eyebrow">ΠΙΣΤΟΠΟΙΗΣΗ ΕΟΠΠΕΠ</span>
+        <h1>Προετοιμάσου<br>για τις εξετάσεις.</h1>
+        <p>Τεχνικός Αισθητικής Τέχνης και Μακιγιάζ</p>
+        <small>Ανεπίσημο βοήθημα προετοιμασίας</small>
+      </div>
+
+      <nav class="modes" aria-label="Προετοιμασία πιστοποίησης">
+        <button class="mode exam" data-mode="exam" aria-pressed="true">
+          <span class="mode-icon" aria-hidden="true">▤</span>
+          <span><strong>Εξάσκηση ΕΟΠΠΕΠ</strong><small>Ερωτήσεις με χρόνο</small></span>
+        </button>
+        <button class="mode study" data-mode="study" aria-pressed="false">
+          <span class="mode-icon" aria-hidden="true">▧</span>
+          <span><strong>Μελέτη</strong><small>Απαντήσεις και σημειώσεις</small></span>
+        </button>
+        <button class="mode archive" data-mode="archive" aria-pressed="false">
+          <span class="mode-icon" aria-hidden="true">↺</span>
+          <span><strong>Το αρχείο μου</strong><small>Προσπάθειες και αποτελέσματα</small></span>
+        </button>
+      </nav>
+
+      <section class="notebook" aria-labelledby="progressTitle">
+        <span class="eyebrow" id="progressTitle">Η ΠΡΟΟΔΟΣ ΜΟΥ</span>
+        <div class="stats">
+          <div><strong id="rounds">0</strong><span>ολοκληρωμένοι γύροι</span></div>
+          <div><strong id="accuracy">—</strong><span>σωστές στα γνώσεων</span></div>
+        </div>
+        <p id="recent"></p>
+        <small id="storage"></small>
+      </section>
+    </aside>
+
+    <section class="play-area" aria-label="Χώρος μελέτης και εξάσκησης ΕΟΠΠΕΠ">
+      <div class="sheet-heading">
+        <span id="modeName">Εξάσκηση ΕΟΠΠΕΠ</span>
+      </div>
+      <div class="sheet" id="stage"></div>
+      <details class="about">
+        <summary>Σχετικά με το εκπαιδευτικό υλικό</summary>
+        <p>Η παρούσα έκδοση περιλαμβάνει 16 πρωτότυπες ερωτήσεις εξάσκησης. Δεν περιέχει ακόμη ολόκληρη την επίσημη τράπεζα θεμάτων.</p>
+        <p>Η πολλαπλή επιλογή και τα 15 λεπτά είναι ρυθμίσεις της εφαρμογής. Δεν αναπαριστούν τη μορφή ή τη διάρκεια των επίσημων εξετάσεων.</p>
+        <p>Οι σημειώσεις και το ιστορικό αποθηκεύονται σε αυτόν τον browser. Η διαγραφή των δεδομένων του browser μπορεί να τα αφαιρέσει.</p>
+      </details>
+    </section>
+  </div>
+
+  <section class="casual-section" aria-labelledby="casualTitle">
+    <div class="casual-heading">
+      <span class="eyebrow">QUIZ & ΧΑΒΑΛΕΣ</span>
+      <h2 id="casualTitle">Η ομορφιά έχει και παιχνίδι.</h2>
+      <p>Δοκίμασε τις γνώσεις σου ή ανακάλυψε το beauty mood σου.</p>
+    </div>
+    <div class="casual-workspace">
+      <aside class="casual-menu">
+        <h3>Διάλεξε quiz</h3>
+        <nav class="modes" aria-label="Quiz και παιχνίδια">
+          <button class="mode learn" data-casual="learn" aria-pressed="false">
+            <span class="mode-icon" aria-hidden="true">✧</span>
+            <span><strong>Γνώσεις ομορφιάς</strong><small>Πέντε ερωτήσεις με εξηγήσεις</small></span>
+          </button>
+          <button class="mode fun" data-casual="fun" aria-pressed="true">
+            <span class="mode-icon" aria-hidden="true">✿</span>
+            <span><strong>Για τον χαβαλέ</strong><small>Βρες το beauty mood σου</small></span>
+          </button>
+        </nav>
+        <p>Τα ολοκληρωμένα quiz αποθηκεύονται και στο αρχείο σου.</p>
+      </aside>
+      <div class="play-area">
+        <div class="sheet-heading">
+          <span id="casualModeName">Για τον χαβαλέ</span>
+          <span>Beauty quiz</span>
+        </div>
+        <div class="sheet" id="casualStage"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="revision" aria-labelledby="revisionTitle">
+    <div class="revision-heading">
+      <span class="eyebrow">ΣΥΝΕΧΙΣΕ ΤΗΝ ΠΡΟΕΤΟΙΜΑΣΙΑ</span>
+      <h2 id="revisionTitle">Η επανάληψη κάνει τη διαφορά.</h2>
+      <p>Ξαναδιάβασε τις εξηγήσεις και κράτησε όσα χρειάζονται περισσότερη προσοχή.</p>
+    </div>
+    <div class="revision-options">
+      <button data-go="study">
+        <span aria-hidden="true">▧</span>
+        <strong>Διάβασε τις απαντήσεις</strong>
+        <small>Κάρτες μελέτης με χώρο για τις σημειώσεις σου.</small>
+        <b aria-hidden="true">↗</b>
+      </button>
+      <button data-go="archive">
+        <span aria-hidden="true">↺</span>
+        <strong>Δες τις προσπάθειές σου</strong>
+        <small>Επέστρεψε στις απαντήσεις των προηγούμενων γύρων.</small>
+        <b aria-hidden="true">↗</b>
+      </button>
+    </div>
+  </section>
+</main>
+
+<section class="support" id="support" aria-labelledby="supportTitle">
+  <span class="support-coffee" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 8h12v6a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5V8Z"/>
+      <path d="M17 9h2a3 3 0 0 1 0 6h-2M4 22h15M9 3v2M13 2v3"/>
+    </svg>
+  </span>
+  <div>
+    <h2 id="supportTitle">Στήριξε το BEAUTY CHALLENGE.</h2>
+    <p>Ένας καφές για να συνεχίσουμε να δημιουργούμε υλικό εξάσκησης.</p>
+  </div>
+  <a class="donate" href="https://revolut.me/konstajmq6" target="_blank" rel="noopener noreferrer">Κέρασε έναν καφέ ↗</a>
+</section>
+
+<footer>
+  <span>By Threepoint Studio ATH</span>
+  <span>Special thanks to Loula Rou <span class="heart" aria-label="με αγάπη">♡</span></span>
+</footer>
+</div>
+
+<dialog id="confirm" aria-labelledby="confirmTitle">
+  <h2 id="confirmTitle">Ολοκλήρωση εξάσκησης</h2>
+  <p id="confirmText"></p>
+  <div class="actions">
+    <button class="quiet" id="cancelFinish">Πίσω στις ερωτήσεις</button>
+    <button class="primary" id="finishExam">Ολοκλήρωση</button>
+  </div>
+</dialog>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const area=document.querySelector('#casualStage');
+  const buttons=[...document.querySelectorAll('[data-casual]')];
+  let mode=['fun','learn'].includes(state.casualMode)?state.casualMode:'fun';
+  const focus=()=>area.querySelector('h2')?.focus({preventScroll:true});
+
+  function draw(){
+    buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.casual===mode)));
+    document.querySelector('#casualModeName').textContent=names[mode];
+    const s=state.sessions[mode];
+
+    if(!s){
+      area.innerHTML=`
+        <span class="tag">${mode==='fun'?'Beauty mood':'Quiz γνώσεων'}</span>
+        <h2 tabindex="-1">${mode==='fun'?'Ποιο είναι το beauty mood σου;':'Πόσα ξέρεις για την ομορφιά;'}</h2>
+        <p>${mode==='fun'?'Πέντε ερωτήσεις χωρίς σωστό ή λάθος. Διάλεξε αυτό που σου ταιριάζει.':'Πέντε ερωτήσεις με άμεση διόρθωση και εξήγηση.'}</p>
+        <button class="primary" data-do="start">Ξεκίνα το quiz →</button>`;
+      return;
+    }
+
+    if(s.done){
+      let title,description;
+      if(mode==='fun'){
+        const scores=[0,0,0,0];
+        s.answers.forEach(a=>{if(a!==null)scores[a]++});
+        const high=Math.max(...scores);
+        [title,description]=scores.filter(x=>x===high).length>1?
+          ['Λίγο απ’ όλα — και σου πάει!','Το beauty mood σου συνδυάζει διαφορετικές διαθέσεις.']:
+          moods[scores.indexOf(high)];
+      }else{
+        title=`${s.correct} / ${s.ids.length} σωστές`;
+        description='Δες τις εξηγήσεις και δοκίμασε έναν νέο γύρο.';
+      }
+
+      area.innerHTML=`
+        <div class="result">
+          <span class="result-flower" aria-hidden="true">✳</span>
+          <span class="tag">Το αποτέλεσμά σου</span>
+          <h2 tabindex="-1">${title}</h2>
+          <p>${description}</p>
+          ${mode==='fun'?'<p class="small muted">Για διασκέδαση — δεν είναι αξιολόγηση προσωπικότητας ή εμφάνισης.</p>':''}
+          <button class="primary" data-do="start">Παίξε ξανά ↗</button>
+        </div>
+        ${mode==='learn'?`
+          <div class="review">
+            ${s.ids.map((id,i)=>{
+              const q=bank[id];
+              return `<details>
+                <summary>${s.answers[i]===0?'✓':'↗'} ${q[1]}</summary>
+                <p>Η επιλογή σου: ${s.answers[i]===null?'Δεν απαντήθηκε':q[2][s.answers[i]]}</p>
+                <p><strong>Σωστή απάντηση: ${q[2][0]}</strong></p>
+                <p>${q[3]}</p>
+              </details>`;
+            }).join('')}
+          </div>`:''}`;
+      return;
+    }
+
+    const i=s.pos;
+    const q=mode==='fun'?fun[s.ids[i]]:bank[s.ids[i]];
+    const opts=mode==='fun'?q[1]:q[2];
+    const locked=s.locked[i];
+
+    area.innerHTML=`
+      <div class="question-meta">
+        <span class="tag">${mode==='fun'?'Χωρίς σωστό ή λάθος':q[0]}</span>
+        <span>${i+1} / ${s.ids.length}</span>
+      </div>
+      <progress max="${s.ids.length}" value="${s.answers.filter(a=>a!==null).length}" aria-label="Απαντημένες ερωτήσεις"></progress>
+      <h2 tabindex="-1">${mode==='fun'?q[0]:q[1]}</h2>
+      <div class="answers">
+        ${s.orders[i].map(a=>`
+          <button class="answer ${s.answers[i]===a?'selected':''} ${locked&&a===0?'correct':''} ${locked&&s.answers[i]===a&&a!==0?'wrong':''}"
+            data-choice="${a}" aria-pressed="${s.answers[i]===a}" ${locked?'disabled':''}>
+            ${opts[a]}
+            ${locked&&a===0?'<span>✓ Σωστή απάντηση</span>':''}
+            ${locked&&s.answers[i]===a&&a!==0?'<span>× Η επιλογή σου</span>':''}
+          </button>`).join('')}
+      </div>
+      <div class="feedback" role="status">
+        ${locked?`<strong>${s.answers[i]===0?'Σωστά!':'Δες την εξήγηση'}</strong><p>${q[3]}</p>`:
+          mode==='fun'?'Διάλεξε αυτό που σου ταιριάζει.':'Διάλεξε απάντηση και πάτησε έλεγχο.'}
+      </div>
+      <div class="actions">
+        <button class="quiet" data-do="prev" ${i===0?'disabled':''}>← Πίσω</button>
+        ${mode==='learn'&&!locked?`
+          <button class="primary" data-do="check" ${s.answers[i]===null?'disabled':''}>Έλεγχος απάντησης</button>`:`
+          <button class="primary" data-do="next" ${s.answers[i]===null?'disabled':''}>
+            ${i===s.ids.length-1?'Δες το αποτέλεσμα':'Συνέχεια →'}
+          </button>`}
+      </div>`;
+  }
+
+  buttons.forEach(b=>{
+    b.addEventListener('click',()=>{
+      mode=b.dataset.casual;
+      state.casualMode=mode;
+      save();
+      draw();
+      area.scrollIntoView({block:'nearest'});
+      focus();
+    });
+  });
+
+  area.addEventListener('click',e=>{
+    const b=e.target.closest('button');
+    if(!b||b.disabled)return;
+    const action=b.dataset.do;
+
+    if(action==='start'){
+      state.sessions[mode]=create(mode);
+      save();
+      draw();
+      focus();
+      return;
+    }
+
+    const s=state.sessions[mode];
+    if(!s||s.done)return;
+
+    if(b.hasAttribute('data-choice')&&!s.locked[s.pos]){
+      s.answers[s.pos]=Number(b.dataset.choice);
+    }
+    if(action==='check'&&s.answers[s.pos]!==null){
+      s.locked[s.pos]=true;
+    }
+    if(action==='prev'){
+      s.pos=Math.max(0,s.pos-1);
+    }
+    if(action==='next'){
+      if(s.answers[s.pos]===null||(mode==='learn'&&!s.locked[s.pos]))return;
+      if(s.pos<s.ids.length-1){
+        s.pos++;
+      }else{
+        finish(s);
+        progress();
+        if(state.mode==='archive')render();
+      }
+    }
+
+    save();
+    draw();
+
+    if(b.hasAttribute('data-choice')){
+      area.querySelector(`[data-choice="${b.dataset.choice}"]`)?.focus({preventScroll:true});
+    }else if(action==='check'){
+      area.querySelector('[data-do="next"]')?.focus({preventScroll:true});
+    }else{
+      focus();
+    }
+  });
+
+  draw();
+});
+</script>
+</body>
+</html>
