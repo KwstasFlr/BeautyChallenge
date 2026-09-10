@@ -10,7 +10,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="app.js" defer></script>
+
 <style>
+.quiz-home-button{margin-bottom:24px;min-height:44px}
+.quiz-settings{display:grid;gap:10px;margin:24px 0;max-width:440px}
+.quiz-settings label{font-weight:600;font-size:14px}
+.quiz-settings select,.quiz-settings input{width:100%;min-height:46px;padding:10px 12px;border:1px solid #cbbfc5;border-radius:12px;background:#fff;color:#332830;font:inherit}
+.quiz-settings input{margin-top:8px}
+.quiz-settings [hidden]{display:none}
+.match-traits{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:20px 0}
+.match-traits span{background:#eee3eb;padding:8px 12px;border-radius:16px;font-size:14px}
+.daily-section{margin:58px 0 28px;padding:28px;border-radius:24px;background:#e8dedf}
+.daily-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+.daily-heading h2{font-size:24px;margin:0}
+.daily-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.daily-grid article{padding:24px;background:#fbf7f2;border-radius:18px}
+.daily-grid p,.daily-grid blockquote{font-size:18px;line-height:1.7;margin:12px 0 0}
+.daily-grid blockquote{font-family:'Noto Serif',serif}
+.daily-section details{margin-top:16px;font-size:12px;color:#61525a}
+
+@media(max-width:650px){
+.daily-grid{grid-template-columns:1fr}
+.daily-section{padding:18px}
+.quiz-home-button{width:100%;text-align:left}
+}
+
 html{scroll-behavior:smooth}
 .top-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
 .donate-top{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:13px;font-weight:600;color:var(--plum);padding:8px 11px;border-radius:12px}
@@ -57,9 +81,11 @@ footer{display:block;text-align:left}
 .consent-actions button{flex:1;background:var(--lilac);color:var(--plum);padding:12px;border-radius:10px;font-size:14px;font-weight:600}
 .consent-actions button:hover{background:#d9cce2}
 .consent-status{font-size:12px!important;color:var(--muted)}
+
 @media(max-width:1000px){
 .casual-workspace{grid-template-columns:270px minmax(0,1fr);gap:25px}
 }
+
 @media(max-width:760px){
 .masthead{align-items:flex-start}
 .top-actions{gap:7px;max-width:160px}
@@ -77,16 +103,20 @@ footer{display:block;text-align:left}
 .home-actions button{flex:1}
 .exam-home-button{width:100%;justify-content:center}
 }
+
 @media(max-width:400px){
 .casual-menu .modes{grid-template-columns:1fr}
 }
+
 @media(prefers-reduced-motion:reduce){
 html{scroll-behavior:auto}
 }
 </style>
 </head>
+
 <body>
 <a class="skip" href="#stage">Πήγαινε στην εξάσκηση</a>
+
 <div class="page">
 
 <header class="masthead">
@@ -94,15 +124,23 @@ html{scroll-behavior:auto}
     <span class="brand-icon" aria-hidden="true">✳</span>
     <span>BEAUTY<br>CHALLENGE<small>Threepoint Studio ATH</small></span>
   </a>
+
   <nav class="top-actions" aria-label="Χρήσιμοι σύνδεσμοι">
-    <a class="official" href="https://www.eoppep.gr/phocadownload/themata2017/24_TEXNIKOS%20AISTHHTIKHS%20TEXNHS%20KAI%20MAKIGIAZ.pdf" target="_blank" rel="noopener noreferrer">Επίσημα θέματα ↗</a>
+    <a class="official"
+       href="https://www.eoppep.gr/phocadownload/themata2017/24_TEXNIKOS%20AISTHHTIKHS%20TEXNHS%20KAI%20MAKIGIAZ.pdf"
+       target="_blank" rel="noopener noreferrer">
+      Επίσημα θέματα ↗
+    </a>
+
     <a class="donate-top" href="#support">
       <span class="coffee-dot" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
           <path d="M5 8h12v6a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5V8Z"/>
           <path d="M17 9h2a3 3 0 0 1 0 6h-2M4 22h15M9 3v2M13 2v3"/>
         </svg>
-      </span>Donate
+      </span>
+      Donate
     </a>
   </nav>
 </header>
@@ -120,53 +158,99 @@ html{scroll-behavior:auto}
       <nav class="modes" aria-label="Προετοιμασία πιστοποίησης">
         <button class="mode exam" data-mode="exam" aria-pressed="true">
           <span class="mode-icon" aria-hidden="true">▤</span>
-          <span><strong>Εξάσκηση ΕΟΠΠΕΠ</strong><small>Αρχική και επιλογή προσπάθειας</small></span>
+          <span>
+            <strong>Εξάσκηση ΕΟΠΠΕΠ</strong>
+            <small>Αρχική και επιλογή προσπάθειας</small>
+          </span>
         </button>
+
         <button class="mode study" data-mode="study" aria-pressed="false">
           <span class="mode-icon" aria-hidden="true">▧</span>
-          <span><strong>Μελέτη</strong><small>Απαντήσεις και σημειώσεις</small></span>
+          <span>
+            <strong>Μελέτη</strong>
+            <small>Απαντήσεις και σημειώσεις</small>
+          </span>
         </button>
+
         <button class="mode archive" data-mode="archive" aria-pressed="false">
           <span class="mode-icon" aria-hidden="true">↺</span>
-          <span><strong>Το αρχείο μου</strong><small>Προσπάθειες και αποτελέσματα</small></span>
+          <span>
+            <strong>Το αρχείο μου</strong>
+            <small>Προσπάθειες και αποτελέσματα</small>
+          </span>
         </button>
       </nav>
 
       <section class="notebook" aria-labelledby="progressTitle">
         <span class="eyebrow" id="progressTitle">Η ΠΡΟΟΔΟΣ ΜΟΥ</span>
         <div class="stats">
-          <div><strong id="rounds">0</strong><span>ολοκληρωμένοι γύροι</span></div>
-          <div><strong id="accuracy">—</strong><span>σωστές στα γνώσεων</span></div>
+          <div>
+            <strong id="rounds">0</strong>
+            <span>ολοκληρωμένοι γύροι</span>
+          </div>
+          <div>
+            <strong id="accuracy">—</strong>
+            <span>σωστές στα γνώσεων</span>
+          </div>
         </div>
         <p id="recent"></p>
         <small id="storage"></small>
       </section>
     </aside>
 
-    <section class="play-area" aria-label="Χώρος μελέτης και εξάσκησης ΕΟΠΠΕΠ">
-      <div class="sheet-heading"><span id="modeName">Εξάσκηση ΕΟΠΠΕΠ</span></div>
+    <section class="play-area"
+             aria-label="Χώρος μελέτης και εξάσκησης ΕΟΠΠΕΠ">
+      <div class="sheet-heading">
+        <span id="modeName">Εξάσκηση ΕΟΠΠΕΠ</span>
+      </div>
+
       <div class="sheet" id="stage"></div>
+
       <details class="about">
         <summary>Εκπαιδευτικό υλικό και πηγές</summary>
-        <p>64 πρωτότυπες ερωτήσεις εξάσκησης. Δεν αποτελούν την πλήρη επίσημη τράπεζα ή επίσημες απαντήσεις ΕΟΠΠΕΠ. Ο χρόνος και η πολλαπλή επιλογή είναι ρυθμίσεις της εφαρμογής.</p>
-        <p>Πηγές αναφοράς:
-          <a href="https://openstax.org/books/anatomy-and-physiology-2e/pages/5-1-layers-of-the-skin" target="_blank" rel="noopener noreferrer">OpenStax — ανατομία</a>,
-          <a href="https://www.fda.gov/cosmetics/resources-consumers-cosmetics/using-cosmetics-safely" target="_blank" rel="noopener noreferrer">FDA — ασφάλεια καλλυντικών</a>,
-          <a href="https://www.cdc.gov/infection-control/hcp/disinfection-sterilization/introduction-methods-definition-of-terms.html" target="_blank" rel="noopener noreferrer">CDC — καθαρισμός και αποστείρωση</a>,
-          <a href="https://www.aad.org/public/everyday-care/sun-protection/shade-clothing-sunscreen/how-to-select-sunscreen" target="_blank" rel="noopener noreferrer">AAD — αντηλιακή προστασία</a>.
+        <p>
+          <span data-bank-count>140</span> πρωτότυπες ερωτήσεις εξάσκησης
+          με απαντήσεις και επεξηγήσεις. Εκπαιδευτικό υλικό προετοιμασίας —
+          οι απαντήσεις δεν αποτελούν επίσημη λύση του ΕΟΠΠΕΠ ούτε την
+          πλήρη επίσημη τράπεζα. Ο χρόνος και η πολλαπλή επιλογή είναι
+          ρυθμίσεις της εφαρμογής.
         </p>
-        <p>Το ιστορικό και οι σημειώσεις αποθηκεύονται στον ίδιο browser. Η διαγραφή των δεδομένων του browser μπορεί να τα αφαιρέσει.</p>
+        <p>
+          <a href="https://www.eoppep.gr/index.php/el/pistopoiiseis-eksetaseis/apofoitoi-saek/themata-exetaseon-saek/θέματα-εξετάσεων-πιστοποίησης-αρχικής-επαγγελματικής-κατάρτισης-ν-2009-1992-κατάλογος-ερωτήσεων-παλαιού-τύπου?download=167:epaggelmatiko-makigiaz&amp;start=40"
+             target="_blank" rel="noopener noreferrer">
+            ΕΟΠΠΕΠ — Επαγγελματικό Μακιγιάζ, κατάλογος παλαιού τύπου ↗
+          </a>.
+          Συμπληρωματικό υλικό επανάληψης άλλης ειδικότητας· δεν
+          αντικαθιστά τον κατάλογο της δικής σου ειδικότητας.
+        </p>
+        <p>
+          Πηγές αναφοράς:
+          <a href="https://openstax.org/books/anatomy-and-physiology-2e/pages/5-1-layers-of-the-skin"
+             target="_blank" rel="noopener noreferrer">OpenStax — ανατομία</a>,
+          <a href="https://www.fda.gov/cosmetics/resources-consumers-cosmetics/using-cosmetics-safely"
+             target="_blank" rel="noopener noreferrer">FDA — ασφάλεια καλλυντικών</a>,
+          <a href="https://www.cdc.gov/infection-control/hcp/disinfection-sterilization/introduction-methods-definition-of-terms.html"
+             target="_blank" rel="noopener noreferrer">CDC — καθαρισμός και αποστείρωση</a>,
+          <a href="https://www.aad.org/public/everyday-care/sun-protection/shade-clothing-sunscreen/how-to-select-sunscreen"
+             target="_blank" rel="noopener noreferrer">AAD — αντηλιακή προστασία</a>.
+        </p>
+        <p>
+          Το ιστορικό και οι σημειώσεις αποθηκεύονται στον ίδιο browser.
+          Η διαγραφή των δεδομένων του browser μπορεί να τα αφαιρέσει.
+        </p>
       </details>
     </section>
   </div>
 
   <div class="beauty-break">
-    <svg viewBox="0 0 1200 220" role="img" aria-labelledby="dividerTitle" preserveAspectRatio="xMidYMid slice">
+    <svg viewBox="0 0 1200 220" role="img"
+         aria-labelledby="dividerTitle" preserveAspectRatio="xMidYMid slice">
       <title id="dividerTitle">Πινέλα, παλέτα χρωμάτων και εργαλεία μακιγιάζ</title>
       <rect width="1200" height="220" fill="#e5dbe7"/>
       <path d="M0 155C180 70 280 250 490 145S810 100 1200 20V220H0Z" fill="#d4c3d6"/>
       <path d="M700 0C760 95 900 150 1200 145V0Z" fill="#eeded0"/>
       <ellipse cx="237" cy="184" rx="139" ry="18" fill="#c4b1c5"/>
+
       <g transform="translate(112 30) rotate(-8 110 70)">
         <rect width="250" height="145" rx="30" fill="#684657"/>
         <rect x="10" y="10" width="230" height="125" rx="22" fill="#f1e7dd"/>
@@ -177,25 +261,32 @@ html{scroll-behavior:auto}
         <circle cx="125" cy="102" r="24" fill="#877868"/>
         <circle cx="195" cy="102" r="24" fill="#5b414e"/>
       </g>
+
       <path d="M438 130C467 77 546 71 599 93C631 107 650 111 687 98C721 85 749 92 741 114C720 149 678 165 630 148C575 127 529 118 474 152C457 161 428 151 438 130Z" fill="#ab7989"/>
-      <path d="M467 142C537 107 590 130 636 145" fill="none" stroke="#c39aa5" stroke-width="10" stroke-linecap="round"/>
+      <path d="M467 142C537 107 590 130 636 145" fill="none"
+            stroke="#c39aa5" stroke-width="10" stroke-linecap="round"/>
+
       <g transform="translate(790 18) rotate(24 20 100)">
         <rect x="6" y="95" width="25" height="112" rx="12" fill="#624655"/>
         <rect x="4" y="62" width="29" height="45" rx="4" fill="#b7a28d"/>
         <path d="M4 65C-15 20 0-7 19-7S52 22 33 65Z" fill="#886958"/>
-        <path d="M7 52C-3 22 7 5 12 1M18 57V0M28 51C37 24 28 7 26 3" fill="none" stroke="#a58974" stroke-width="3"/>
+        <path d="M7 52C-3 22 7 5 12 1M18 57V0M28 51C37 24 28 7 26 3"
+              fill="none" stroke="#a58974" stroke-width="3"/>
       </g>
+
       <g transform="translate(933 55) rotate(-12 22 75)">
         <rect y="74" width="45" height="90" rx="7" fill="#624655"/>
         <rect x="5" y="49" width="35" height="40" rx="3" fill="#c7aa83"/>
         <path d="M9 51V12L36 0V51Z" fill="#b26b76"/>
         <path d="M9 12L36 0V12L9 25Z" fill="#c88990"/>
       </g>
+
       <g transform="translate(1060 104)">
         <ellipse cx="47" cy="42" rx="57" ry="43" fill="#a98da4"/>
         <ellipse cx="47" cy="32" rx="55" ry="41" fill="#f0e4d9"/>
         <ellipse cx="47" cy="32" rx="42" ry="30" fill="#b98078"/>
       </g>
+
       <circle cx="411" cy="55" r="6" fill="#b99773"/>
       <circle cx="711" cy="175" r="5" fill="#8d657d"/>
       <circle cx="1023" cy="39" r="8" fill="#b99773"/>
@@ -203,38 +294,75 @@ html{scroll-behavior:auto}
   </div>
 
   <section class="casual-section" aria-labelledby="casualTitle">
-    <div class="casual-heading"><h2 id="casualTitle">Quiz & χαβαλές</h2></div>
+    <div class="casual-heading">
+      <h2 id="casualTitle">Quiz & χαβαλές</h2>
+    </div>
+
     <div class="casual-workspace">
       <aside class="casual-menu">
         <nav class="modes" aria-label="Quiz και παιχνίδια">
           <button class="mode learn" data-casual="learn" aria-pressed="false">
             <span class="mode-icon" aria-hidden="true">✧</span>
-            <span><strong>Γνώσεις ομορφιάς</strong><small>10 ερωτήσεις με εξηγήσεις</small></span>
+            <span>
+              <strong>Γνώσεις ομορφιάς</strong>
+              <small>Διάλεξε θεματική και μέγεθος γύρου</small>
+            </span>
           </button>
+
           <button class="mode sos" data-casual="sos" aria-pressed="false">
             <span class="mode-icon" aria-hidden="true">↯</span>
-            <span><strong>Beauty SOS</strong><small>Τι θα έκανες σε αυτή την περίπτωση;</small></span>
+            <span>
+              <strong>Beauty SOS</strong>
+              <small>Τι θα έκανες σε αυτή την περίπτωση;</small>
+            </span>
           </button>
-          <button class="mode fun" data-casual="fun" aria-pressed="true">
+
+          <button class="mode fun" data-casual="celebrity" aria-pressed="true">
             <span class="mode-icon" aria-hidden="true">✿</span>
-            <span><strong>Το beauty mood σου</strong><small>Ποιο στιλ σε εκφράζει σήμερα;</small></span>
-          </button>
-          <button class="mode bag" data-casual="bag" aria-pressed="false">
-            <span class="mode-icon" aria-hidden="true">◈</span>
-            <span><strong>Το νεσεσέρ σου</strong><small>Ετοιμάσου για ένα αυθόρμητο διήμερο</small></span>
-          </button>
-          <button class="mode backstage" data-casual="backstage" aria-pressed="false">
-            <span class="mode-icon" aria-hidden="true">✳</span>
-            <span><strong>Στο backstage</strong><small>Ποιος είναι ο ρόλος σου στην ομάδα;</small></span>
+            <span>
+              <strong>Με ποιον celebrity ταιριάζεις;</strong>
+              <small>10 ερωτήσεις · 64 πιθανά matches</small>
+            </span>
           </button>
         </nav>
         <p>Τα αποτελέσματα αποθηκεύονται στο αρχείο σου.</p>
       </aside>
+
       <div class="play-area">
-        <div class="sheet-heading"><span id="casualModeName">Το beauty mood σου</span></div>
+        <div class="sheet-heading">
+          <span id="casualModeName">Με ποιον celebrity ταιριάζεις;</span>
+        </div>
         <div class="sheet" id="casualStage"></div>
       </div>
     </div>
+  </section>
+
+  <section class="daily-section" aria-labelledby="dailyTitle">
+    <div class="daily-heading">
+      <h2 id="dailyTitle">Το σημερινό σου διάλειμμα</h2>
+      <time id="dailyDate"></time>
+    </div>
+
+    <div class="daily-grid">
+      <article>
+        <span class="eyebrow">TIP ΗΜΕΡΑΣ</span>
+        <p id="dailyTip"></p>
+      </article>
+      <article>
+        <span class="eyebrow">ΜΙΑ ΣΚΕΨΗ ΓΙΑ ΣΗΜΕΡΑ</span>
+        <blockquote id="dailyQuote"></blockquote>
+      </article>
+    </div>
+
+    <details>
+      <summary>Πώς αλλάζουν κάθε μέρα;</summary>
+      <p>
+        Κάθε ημερομηνία έχει έναν συνδυασμό από 31 tips και 37 πρωτότυπες
+        φράσεις, με κυκλική εναλλαγή. Καλύπτονται όλες οι ημέρες του χρόνου,
+        μαζί με την 29η Φεβρουαρίου. Η αλλαγή ακολουθεί την ώρα Ελλάδας.
+        Οι φράσεις έχουν γραφτεί για το παιχνίδι και δεν αποδίδονται σε celebrities.
+      </p>
+    </details>
   </section>
 
   <section class="revision" aria-labelledby="revisionTitle">
@@ -242,6 +370,7 @@ html{scroll-behavior:auto}
       <span class="eyebrow">ΕΠΑΝΑΛΗΨΗ</span>
       <h2 id="revisionTitle">Επέστρεψε σε όσα χρειάζονται εξάσκηση.</h2>
     </div>
+
     <div class="revision-options">
       <button data-go="study">
         <span aria-hidden="true">▧</span>
@@ -249,6 +378,7 @@ html{scroll-behavior:auto}
         <small>Διάβασε και κράτησε σημειώσεις.</small>
         <b aria-hidden="true">↗</b>
       </button>
+
       <button data-go="archive">
         <span aria-hidden="true">↺</span>
         <strong>Προηγούμενες προσπάθειες</strong>
@@ -261,26 +391,51 @@ html{scroll-behavior:auto}
 
 <section class="support" id="support" aria-labelledby="supportTitle">
   <span class="support-coffee" aria-hidden="true">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
       <path d="M5 8h12v6a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5V8Z"/>
       <path d="M17 9h2a3 3 0 0 1 0 6h-2M4 22h15M9 3v2M13 2v3"/>
     </svg>
   </span>
+
   <div>
     <h2 id="supportTitle">Στήριξε το BEAUTY CHALLENGE.</h2>
     <p>Ένας καφές για το επόμενο κεφάλαιο.</p>
   </div>
-  <a class="donate" href="https://revolut.me/konstajmq6" target="_blank" rel="noopener noreferrer">Κέρασε έναν καφέ ↗</a>
+
+  <a class="donate" href="https://revolut.me/konstajmq6"
+     target="_blank" rel="noopener noreferrer">
+    Κέρασε έναν καφέ ↗
+  </a>
 </section>
 
 <footer>
   <div class="footer-main">
     <span>By Threepoint Studio ATH</span>
-    <span>Special thanks to Loula Rou <span class="heart" aria-label="με αγάπη">♡</span></span>
+    <span>
+      Special thanks to Loula Rou
+      <span class="heart" aria-label="με αγάπη">♡</span>
+    </span>
   </div>
-  <button class="analytics-settings" id="analyticsSettings" type="button">Ρυθμίσεις cookies</button>
+
+  <button class="analytics-settings" id="analyticsSettings" type="button">
+    Ρυθμίσεις cookies
+  </button>
 </footer>
+
 </div>
+
+<dialog id="newQuizDialog" aria-labelledby="newQuizTitle">
+  <h2 id="newQuizTitle">Να ξεκινήσει νέος γύρος;</h2>
+  <p>
+    Ο ημιτελής γύρος αυτού του quiz θα αντικατασταθεί.
+    Μπορείς να επιστρέψεις και να τον συνεχίσεις.
+  </p>
+  <div class="actions">
+    <button class="quiet" id="cancelNewQuiz">Κράτησε τον γύρο</button>
+    <button class="primary" id="confirmNewQuiz">Νέος γύρος</button>
+  </div>
+</dialog>
 
 <dialog id="confirm" aria-labelledby="confirmTitle">
   <h2 id="confirmTitle">Ολοκλήρωση εξάσκησης</h2>
@@ -300,13 +455,29 @@ html{scroll-behavior:auto}
   </div>
 </dialog>
 
-<aside class="consent-box" id="analyticsConsent" aria-labelledby="analyticsTitle" hidden>
+<aside class="consent-box" id="analyticsConsent"
+       aria-labelledby="analyticsTitle" hidden>
   <h2 id="analyticsTitle" tabindex="-1">Cookies & στατιστικά</h2>
-  <p>Επιτρέπεις τη χρήση Google Analytics και cookies για τη μέτρηση επισκέψεων και χρήσης της σελίδας;</p>
-  <p>Τα quiz λειτουργούν και χωρίς αποδοχή. Η επιλογή αφορά τα στατιστικά· η πρόοδος αποθηκεύεται ξεχωριστά στον browser σου.</p>
-  <p>Μπορείς να αλλάξεις την επιλογή σου από τις «Ρυθμίσεις cookies» στο κάτω μέρος.</p>
-  <p><a href="https://policies.google.com/technologies/partner-sites?hl=el" target="_blank" rel="noopener noreferrer">Πώς χρησιμοποιεί τα δεδομένα η Google ↗</a></p>
+  <p>
+    Επιτρέπεις τη χρήση Google Analytics και cookies
+    για τη μέτρηση επισκέψεων και χρήσης της σελίδας;
+  </p>
+  <p>
+    Τα quiz λειτουργούν και χωρίς αποδοχή. Η επιλογή αφορά τα στατιστικά·
+    η πρόοδος αποθηκεύεται ξεχωριστά στον browser σου.
+  </p>
+  <p>
+    Μπορείς να αλλάξεις την επιλογή σου από τις «Ρυθμίσεις cookies»
+    στο κάτω μέρος.
+  </p>
+  <p>
+    <a href="https://policies.google.com/technologies/partner-sites?hl=el"
+       target="_blank" rel="noopener noreferrer">
+      Πώς χρησιμοποιεί τα δεδομένα η Google ↗
+    </a>
+  </p>
   <p class="consent-status" id="analyticsStatus"></p>
+
   <div class="consent-actions">
     <button id="rejectAnalytics" type="button">Απόρριψη</button>
     <button id="acceptAnalytics" type="button">Αποδοχή</button>
@@ -345,19 +516,28 @@ document.addEventListener('DOMContentLoaded',()=>{
 
           ${s?(s.done?`
             <div class="ongoing-attempt">
-              <p>Η προηγούμενη προσπάθεια ολοκληρώθηκε:
+              <p>
+                Η προηγούμενη προσπάθεια ολοκληρώθηκε:
                 <strong>${s.correct} / ${s.ids.length} σωστές</strong>
               </p>
-              <button class="quiet" data-exam-nav="resume">Δες τη διόρθωση</button>
+              <button class="quiet" data-exam-nav="resume">
+                Δες τη διόρθωση
+              </button>
             </div>`:`
             <div class="ongoing-attempt">
               <strong>Προσπάθεια σε εξέλιξη</strong>
               <p>${answered} / ${s.ids.length} απαντημένες ερωτήσεις</p>
-              <p>Απομένουν
-                <span class="timer" id="timer" aria-label="Υπόλοιπος χρόνος">${clockText(s)}</span>
+              <p>
+                Απομένουν
+                <span class="timer" id="timer"
+                      aria-label="Υπόλοιπος χρόνος">${clockText(s)}</span>
               </p>
-              <button class="primary" data-exam-nav="resume">Συνέχεια προσπάθειας →</button>
-              <p class="small muted">Ο χρόνος συνεχίζει. Οι απαντήσεις σου έχουν κρατηθεί.</p>
+              <button class="primary" data-exam-nav="resume">
+                Συνέχεια προσπάθειας →
+              </button>
+              <p class="small muted">
+                Ο χρόνος συνεχίζει. Οι απαντήσεις σου έχουν κρατηθεί.
+              </p>
             </div>`):''}
 
           <label class="exam-label" for="examCount">Νέα προσπάθεια</label>
@@ -367,8 +547,14 @@ document.addEventListener('DOMContentLoaded',()=>{
                 ${n} ερωτήσεις / ${n*1.5} λεπτά
               </option>`).join('')}
           </select>
-          <button class="primary start-selected" data-exam-nav="new">Ξεκίνα νέα προσπάθεια →</button>
-          <p class="small muted">Η μορφή και ο χρόνος αφορούν την εξάσκηση της εφαρμογής.</p>
+
+          <button class="primary start-selected" data-exam-nav="new">
+            Ξεκίνα νέα προσπάθεια →
+          </button>
+
+          <p class="small muted">
+            Η μορφή και ο χρόνος αφορούν την εξάσκηση της εφαρμογής.
+          </p>
 
           <div class="home-actions">
             <button class="quiet" data-exam-nav="study">Μελέτη</button>
@@ -376,8 +562,10 @@ document.addEventListener('DOMContentLoaded',()=>{
           </div>
         </div>`;
     }else if(s){
-      stage.insertAdjacentHTML('afterbegin',
-        '<button class="quiet exam-home-button" data-exam-nav="home">← Αρχική ΕΟΠΠΕΠ</button>');
+      stage.insertAdjacentHTML(
+        'afterbegin',
+        '<button class="quiet exam-home-button" data-exam-nav="home">← Αρχική ΕΟΠΠΕΠ</button>'
+      );
     }
   };
 
@@ -397,7 +585,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(nav==='new'){
       if(state.sessions.exam&&!state.sessions.exam.done){
         document.querySelector('#newExamText').textContent=
-          'Η τρέχουσα προσπάθεια θα ολοκληρωθεί και θα αποθηκευτεί στο αρχείο. Οι αναπάντητες ερωτήσεις θα μετρήσουν ως μη σωστές. Να ξεκινήσει νέα με '+state.examCount+' ερωτήσεις;';
+          'Η τρέχουσα προσπάθεια θα ολοκληρωθεί και θα αποθηκευτεί στο αρχείο. '+
+          'Οι αναπάντητες ερωτήσεις θα μετρήσουν ως μη σωστές. '+
+          'Να ξεκινήσει νέα με '+state.examCount+' ερωτήσεις;';
+
         document.querySelector('#newExamDialog').showModal();
       }else{
         startSelected();
@@ -409,10 +600,12 @@ document.addEventListener('DOMContentLoaded',()=>{
       examHome=true;
       state.mode='exam';
     }
+
     if(nav==='resume'){
       examHome=false;
       state.mode='exam';
     }
+
     if(nav==='study'||nav==='archive'){
       examHome=true;
       state.mode=nav;
@@ -424,7 +617,10 @@ document.addEventListener('DOMContentLoaded',()=>{
   },true);
 
   stage.addEventListener('change',e=>{
-    if(e.target.id==='examCount'&&[10,20,30].includes(Number(e.target.value))){
+    if(
+      e.target.id==='examCount'&&
+      [10,20,30].includes(Number(e.target.value))
+    ){
       state.examCount=Number(e.target.value);
       save();
     }
@@ -433,9 +629,11 @@ document.addEventListener('DOMContentLoaded',()=>{
   function startSelected(){
     const previous=state.sessions.exam;
     if(previous&&!previous.done)finish(previous);
+
     state.mode='exam';
     state.sessions.exam=create('exam');
     examHome=false;
+
     save();
     render();
     focus();
@@ -457,9 +655,11 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('.brand').forEach(a=>{
     a.addEventListener('click',e=>{
       if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;
+
       e.preventDefault();
       examHome=true;
       state.mode='exam';
+
       save();
       render();
       window.scrollTo({top:0,behavior:'auto'});
@@ -469,5 +669,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   render();
 });
 </script>
+
 </body>
 </html>
