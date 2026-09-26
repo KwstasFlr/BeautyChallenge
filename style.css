@@ -383,3 +383,28 @@ body #stage:has(> .intro) {
     min-height: 0;
   }
 }
+
+/* Unified neutral palette: ivory surfaces, charcoal text, one muted plum accent. */
+:root{--paper:#f7f6f3;--ink:#302e32;--muted:#706c72;--plum:#635169;--lilac:#eeeaf0;--peach:#f0eeeb;--sage:#eeefec;--white:#ffffff}
+body{background:#f7f6f3}
+body .workspace>.sidebar,body .daily-section,body .support{background:#eeece8;border-color:#dedbd6}
+body #stage,body #stage:has(>.intro),body .quiz-feature,body .celebrity-section,body .daily-challenge-card{background:#fff;border-color:#dedbd6}
+body .workspace .welcome,body .workspace .notebook{border-color:#dedbd6}
+body .workspace .mode.exam,body .workspace .mode.study,body .workspace .mode.archive{background:#fff;border-color:#dedbd6}
+body .workspace .mode[aria-pressed=true]{background:#eeeaf0;border-color:#a99bad}
+body #stage .exam-choice-panel{background:#f7f6f3;border-color:#e2dfda;box-shadow:none}
+body #stage .exam-choice-panel #examCount{background:#fff;border-color:#d8d4db}
+body #stage>.intro .exam-lead,body .welcome h1,body .welcome p{color:var(--ink)}
+body .studio-link,body .studio-link:hover,body .support-demo,body .official,body .tag,body .feature-symbol,body .learn-feature .feature-symbol,body .sos-feature .feature-symbol,body .daily-section::before{background:#e8e3eb;color:#635169;border-color:#d8d1dc;box-shadow:none}
+body .top-demo,body .primary,body .feature-entry,body .celebrity-entry{background:#635169;color:#fff;border-color:#635169;box-shadow:none}
+body .primary:hover,body .feature-entry:hover,body .celebrity-entry:hover,body .donate:hover{background:#4e3f54;color:#fff}
+body .daily-challenge{background:#403b43;color:#fff}
+body .daily-challenge .eyebrow,body .daily-challenge-day,body .daily-challenge-copy>p:last-child{color:#e2dce5}
+body .celebrity-section:has(#casualStage>.intro) #casualStage,body .sheet,body .donate{background:#fff;border-color:#dedbd6}
+body .feature-topics span,body .mode small{color:var(--muted)}
+body .feature-topics span+span::before{color:#a49aa8}
+body .answer:not(.selected):not(.correct):not(.wrong),body .daily-challenge-option:not(.is-correct):not(.is-wrong),body .quiet,body #stage .home-actions .quiet,body .review details,body .study-card,body .history-card{background:#f2f0ed;color:var(--ink);border-color:#dedbd6}
+body .answer:not(:disabled):hover,body .daily-challenge-option:not(:disabled):hover{background:#e8e3eb}
+body .revision-options button,body .revision-options button:last-child{background:#eeece8}
+body .official-symbol,body .donate-symbol{background:#fff;color:#635169}
+body .daily-section .eyebrow,body .daily-section h2{color:#635169}
