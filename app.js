@@ -1372,6 +1372,8 @@ refreshDaily();
     }catch{}
 
     window.gtag('config',ID,{
+      cookie_prefix:'beauty',
+      cookie_expires:180*86400,
       allow_google_signals:false,
       allow_ad_personalization_signals:false,
       page_location:location.origin+location.pathname,
@@ -1400,7 +1402,7 @@ refreshDaily();
       domains.push('; domain='+domain,'; domain=.'+domain);
     }
 
-    for(const name of ['_ga','_ga_K25078MPVK']){
+    for(const name of ['beauty_ga','beauty_ga_K25078MPVK','_ga_K25078MPVK']){
       for(const domain of domains){
         document.cookie=name+'=; Max-Age=0; path=/'+domain;
       }
@@ -1445,4 +1447,5 @@ refreshDaily();
   panel.hidden=choice!==null;
 
   if(choice==='accepted')enable();
+  else disable();
 })();

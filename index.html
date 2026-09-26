@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#603c51">
+<meta name="theme-color" content="#70264d">
 <title>BEAUTY CHALLENGE — Προετοιμασία ΕΟΠΠΕΠ</title>
+<meta name="description" content="Beauty Challenge — ανεπίσημη εξάσκηση για την πιστοποίηση Τεχνικού Αισθητικής Τέχνης και Μακιγιάζ, από το Threepoint Studio ATH.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script src="app.js" defer></script>
+<link rel="stylesheet" href="style.css?v=20260926">
+<script src="app.js?v=20260926" defer></script>
 
 <style>
 .quiz-home-button{margin-bottom:24px;min-height:44px}
@@ -20,11 +22,11 @@
 .quiz-settings [hidden]{display:none}
 .match-traits{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:20px 0}
 .match-traits span{background:#eee3eb;padding:8px 12px;border-radius:16px;font-size:14px}
-.daily-section{margin:58px 0 28px;padding:28px;border-radius:24px;background:#e8dedf}
+.daily-section{margin:58px 0 28px;padding:28px;border:1px solid #e3cbd6;border-radius:24px;background:linear-gradient(135deg,#f1dfe7,#e8dce8)}
 .daily-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:20px}
 .daily-heading h2{font-size:24px;margin:0}
 .daily-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.daily-grid article{padding:24px;background:#fbf7f2;border-radius:18px}
+.daily-grid article{padding:24px;background:#fffafb;border:1px solid #eadde3;border-radius:18px}
 .daily-grid p,.daily-grid blockquote{font-size:18px;line-height:1.7;margin:12px 0 0}
 .daily-grid blockquote{font-family:'Noto Serif',serif}
 .daily-section details{margin-top:16px;font-size:12px;color:#61525a}
@@ -41,7 +43,7 @@ html{scroll-behavior:smooth}
 .coffee-dot{display:inline-flex;align-items:center;justify-content:center;width:29px;height:29px;border-radius:50%;background:#eddbc8;color:#925d40;flex-shrink:0}
 .coffee-dot svg{width:17px;height:17px}
 .donate-top:hover{background:#ece2e8}
-.beauty-break{margin:80px 0 42px;border-radius:26px;overflow:hidden;background:#e5dbe7}
+.beauty-break{margin:80px 0 42px;border:1px solid #dbc8dd;border-radius:26px;overflow:hidden;background:#e5dbe7;box-shadow:0 18px 45px #70264d12}
 .beauty-break svg{display:block;width:100%;height:220px}
 .casual-section{scroll-margin-top:25px}
 .casual-heading{margin-bottom:26px}
@@ -120,16 +122,19 @@ html{scroll-behavior:auto}
 <div class="page">
 
 <header class="masthead">
-  <a class="brand" href="./index.html">
-    <span class="brand-icon" aria-hidden="true">✳</span>
+  <a class="brand" href="./index.html" aria-label="Beauty Challenge — αρχική">
+    <img class="brand-icon" src="favicon.svg" width="48" height="48" alt="">
     <span>BEAUTY<br>CHALLENGE<small>Threepoint Studio ATH</small></span>
   </a>
 
   <nav class="top-actions" aria-label="Χρήσιμοι σύνδεσμοι">
+    <a class="studio-link" href="https://threepointstudioath.com/" target="_blank" rel="noopener noreferrer">
+      Threepoint Studio ↗
+    </a>
     <a class="official"
-       href="https://www.eoppep.gr/phocadownload/themata2017/24_TEXNIKOS%20AISTHHTIKHS%20TEXNHS%20KAI%20MAKIGIAZ.pdf"
+       href="https://www.eoppep.gr/wp-content/uploads/24_TEXNIKOS20AISTHHTIKHS20TEXNHS20KAI20MAKIGIAZ.pdf"
        target="_blank" rel="noopener noreferrer">
-      Επίσημα θέματα ↗
+      Επίσημα θέματα · PDF ↗
     </a>
 
     <a class="donate-top" href="#support">
@@ -150,7 +155,7 @@ html{scroll-behavior:auto}
     <aside class="sidebar">
       <div class="welcome">
         <span class="eyebrow">ΠΙΣΤΟΠΟΙΗΣΗ ΕΟΠΠΕΠ</span>
-        <h1>Προετοιμάσου<br>για τις εξετάσεις.</h1>
+        <h1>Προετοιμάσου<br> για τις εξετάσεις.</h1>
         <p>Τεχνικός Αισθητικής Τέχνης και Μακιγιάζ</p>
         <small>Ανεπίσημο βοήθημα προετοιμασίας</small>
       </div>
@@ -216,12 +221,12 @@ html{scroll-behavior:auto}
           ρυθμίσεις της εφαρμογής.
         </p>
         <p>
-          <a href="https://www.eoppep.gr/index.php/el/pistopoiiseis-eksetaseis/apofoitoi-saek/themata-exetaseon-saek/θέματα-εξετάσεων-πιστοποίησης-αρχικής-επαγγελματικής-κατάρτισης-ν-2009-1992-κατάλογος-ερωτήσεων-παλαιού-τύπου?download=167:epaggelmatiko-makigiaz&amp;start=40"
+          <a href="https://www.eoppep.gr/wp-content/uploads/24_TEXNIKOS20AISTHHTIKHS20TEXNHS20KAI20MAKIGIAZ.pdf"
              target="_blank" rel="noopener noreferrer">
-            ΕΟΠΠΕΠ — Επαγγελματικό Μακιγιάζ, κατάλογος παλαιού τύπου ↗
+            ΕΟΠΠΕΠ — Τεχνικός Αισθητικής Τέχνης και Μακιγιάζ · επίσημο PDF ↗
           </a>.
-          Συμπληρωματικό υλικό επανάληψης άλλης ειδικότητας· δεν
-          αντικαθιστά τον κατάλογο της δικής σου ειδικότητας.
+          Περιλαμβάνει τις επίσημες ερωτήσεις ανάπτυξης και τη στοχοθεσία
+          του πρακτικού μέρους. Δεν περιλαμβάνει επίσημες απαντήσεις.
         </p>
         <p>
           Πηγές αναφοράς:
@@ -411,13 +416,35 @@ html{scroll-behavior:auto}
 
 <footer>
   <div class="footer-main">
-    <span>By Threepoint Studio ATH</span>
+    <span>
+      By <a href="https://threepointstudioath.com/" target="_blank" rel="noopener noreferrer">Threepoint Studio ATH</a>
+      <span class="footer-links">
+        <a href="#beautyPrivacy">Απόρρητο Beauty Challenge</a>
+        <a href="https://threepointstudioath.com/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        <a href="https://threepointstudioath.com/cookie-policy.html" target="_blank" rel="noopener noreferrer">Cookie Policy</a>
+      </span>
+    </span>
     <span>
       Special thanks to Loula Rou
       <span class="heart" aria-label="με αγάπη">♡</span>
     </span>
   </div>
 
+  <details class="about privacy-notice" id="beautyPrivacy">
+    <summary>Απόρρητο &amp; αποθήκευση δεδομένων</summary>
+    <p>Η πρόοδος, οι απαντήσεις και οι σημειώσεις αποθηκεύονται τοπικά στον browser
+      με το κλειδί beauty-challenge-v1. Δεν αποστέλλονται από την εφαρμογή σε διακομιστή.
+      Η διαγραφή των δεδομένων του ιστοτόπου αφαιρεί το τοπικό αρχείο.</p>
+    <p>Το Google Analytics (G-K25078MPVK) φορτώνεται μόνο μετά από αποδοχή.
+      Μετρά επισκέψεις και τεχνικά στοιχεία χρήσης. Οι απαντήσεις, οι σημειώσεις
+      και η προαιρετική επιλογή ταυτότητας δεν περιλαμβάνονται στα συμβάντα που
+      στέλνει η εφαρμογή. Οι λειτουργίες διαφημιστικής εξατομίκευσης είναι απενεργοποιημένες.</p>
+    <p>Η επιλογή cookies αποθηκεύεται για 180 ημέρες και αλλάζει οποτεδήποτε
+      από τις «Ρυθμίσεις cookies». Η ανάκληση σταματά τη μέτρηση και αφαιρεί
+      τα cookies Analytics αυτής της εφαρμογής· δεν διαγράφει προηγούμενες μετρήσεις
+      που έχουν ήδη αποσταλεί. Η φιλοξενία παρέχεται από GitHub Pages και οι
+      γραμματοσειρές από Google Fonts, που λαμβάνουν τα τεχνικά στοιχεία του αιτήματος.</p>
+  </details>
   <button class="analytics-settings" id="analyticsSettings" type="button">
     Ρυθμίσεις cookies
   </button>
@@ -471,6 +498,7 @@ html{scroll-behavior:auto}
     στο κάτω μέρος.
   </p>
   <p>
+    <a href="#beautyPrivacy">Απόρρητο Beauty Challenge</a> ·
     <a href="https://policies.google.com/technologies/partner-sites?hl=el"
        target="_blank" rel="noopener noreferrer">
       Πώς χρησιμοποιεί τα δεδομένα η Google ↗
@@ -654,6 +682,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   document.querySelectorAll('.brand').forEach(a=>{
     a.addEventListener('click',e=>{
+      if(a.origin!==location.origin)return;
       if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;
 
       e.preventDefault();
