@@ -1,6 +1,6 @@
 :root{
-  --paper:#f4efe9;--ink:#382c35;--muted:#716570;--plum:#603c51;
-  --lilac:#e8dff0;--peach:#efded3;--sage:#dde5d8;--white:#fffdf9;
+  --paper:#f9f3f5;--ink:#291823;--muted:#705c68;--plum:#70264d;
+  --lilac:#eadff2;--peach:#f4ddd5;--sage:#dce9e1;--white:#fffafb;
   --body:"Noto Sans",Arial,sans-serif;--title:"Noto Serif",Georgia,serif
 }
 *{box-sizing:border-box}
@@ -20,7 +20,7 @@ button:disabled{cursor:default}
 .brand-head{display:flex;align-items:flex-start;gap:12px}
 .studio-link{margin-left:61px;padding:3px 8px;border-radius:8px;background:#e4edf3;color:#42677d;font-size:11px;font-weight:700;text-decoration:none;letter-spacing:.2px}
 .studio-link:hover{background:#d7e5ed;color:#2f566d}
-.top-demo{display:inline-flex;align-items:center;min-height:27px;margin-top:5px;padding:4px 9px;border:1px solid #a45f52;border-radius:999px;background:#a45f52;color:#fff;font-size:9px;font-weight:800;letter-spacing:1.25px;box-shadow:0 7px 16px #a45f5230}
+.top-demo{display:inline-flex;align-items:center;min-height:27px;margin-top:5px;padding:4px 9px;border:1px solid #9b416d;border-radius:999px;background:#9b416d;color:#fff;font-size:9px;font-weight:800;letter-spacing:1.25px;box-shadow:0 7px 16px #a45f5230}
 
 /* Παρουσίαση της ενότητας ΕΟΠΠΕΠ */
 .workspace>.sidebar{padding:26px 22px;border:1px solid transparent;border-radius:25px;background:linear-gradient(180deg,#f8f3ed 0%,#efe8e1 100%) padding-box,linear-gradient(145deg,#bda8b5 0%,#eaded5 50%,#b9c8b3 100%) border-box;box-shadow:0 18px 45px #48363f12,inset 0 0 0 5px #ffffff38}
@@ -56,11 +56,11 @@ button:disabled{cursor:default}
 #stage .exam-choice-panel .exam-label{margin-top:0}
 #stage .exam-choice-panel #examCount{width:100%}
 #stage .home-actions{display:flex;gap:10px;margin-top:22px;padding-top:20px;border-top:1px solid #ece4df}
-#stage .home-actions .quiet{border:1px solid #ddd3cd;background:#f4efe9}
+#stage .home-actions .quiet{border:1px solid #ddd3cd;background:#f9f3f5}
 
 .brand-icon{font-size:48px;color:var(--plum);font-weight:400}
 .brand small{display:block;font-size:12px;font-weight:400;letter-spacing:0;color:var(--muted);margin-top:8px}
-.official{display:inline-flex;align-items:center;gap:8px;font-size:14px;text-decoration:none;background:#e8e1db;padding:9px 14px;border-radius:12px}
+.official{display:inline-flex;align-items:center;gap:8px;font-size:14px;text-decoration:none;background:#ead9e3;padding:9px 14px;border-radius:12px}
 .official-symbol{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;border-radius:8px;background:#fff8;color:var(--plum)}
 .official-symbol svg{width:16px;height:16px}
 .workspace{display:grid;grid-template-columns:310px minmax(0,1fr);gap:45px;align-items:start}
@@ -118,7 +118,7 @@ progress::-moz-progress-bar{background:var(--plum);border-radius:10px}
 .actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:23px}
 .primary,.quiet,.donate{padding:12px 17px;border-radius:11px;font-size:14px;font-weight:600;text-decoration:none;display:inline-block}
 .primary{background:var(--plum);color:#fff}
-.primary:hover,.donate:hover{background:#492c3d;color:white}
+.primary:hover,.donate:hover{background:#51203a;color:white}
 .quiet{background:#eee8e2;color:var(--ink)}
 button:disabled:not(.answer){opacity:.42}
 .question-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}
@@ -160,7 +160,7 @@ button:disabled:not(.answer){opacity:.42}
 .daily-challenge h2{font-size:clamp(30px,3.4vw,48px);line-height:1.1;margin:12px 0 17px}
 .daily-challenge-copy>p:last-child{max-width:470px;color:#e8dae2;font-size:14px}
 .daily-challenge-day{margin:18px 0 0;color:#d7b4c6;font-size:12px;font-weight:700;letter-spacing:.9px;text-transform:uppercase}
-.daily-challenge-card{position:relative;z-index:1;padding:clamp(22px,3vw,34px);border:1px solid #ffffff28;border-radius:24px;background:#fffdf9;color:var(--ink);box-shadow:0 20px 50px #21161d35}
+.daily-challenge-card{position:relative;z-index:1;padding:clamp(22px,3vw,34px);border:1px solid #ffffff28;border-radius:24px;background:#fffafb;color:var(--ink);box-shadow:0 20px 50px #21161d35}
 .daily-challenge-options{display:grid;gap:10px}
 .daily-challenge-option{width:100%;padding:14px 16px;border:1px solid #e4d9df;border-radius:13px;background:#f7f2f5;color:var(--ink);text-align:left}
 .daily-challenge-option:hover{background:#eee2e9}
@@ -177,7 +177,7 @@ button:disabled:not(.answer){opacity:.42}
 .celebrity-section-head h2{font-size:clamp(31px,3.6vw,49px);line-height:1.08;margin:0 0 18px}
 .celebrity-section-head p{max-width:460px;color:var(--muted);font-size:15px}
 .celebrity-entry{display:inline-flex;align-items:center;justify-content:center;margin-top:14px;padding:14px 18px;border-radius:13px;background:var(--plum);color:#fff;font-weight:700}
-.celebrity-entry:hover{background:#492c3d}
+.celebrity-entry:hover{background:#51203a}
 .celebrity-entry[aria-pressed="true"]{display:none}
 .quiz-feature{display:grid;grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr);gap:clamp(28px,5vw,70px);align-items:start;margin:70px 0;padding:clamp(28px,4vw,50px);border:1px solid #d9cbd3;border-radius:30px;box-shadow:0 24px 60px #4b354314}
 .learn-feature{background:linear-gradient(140deg,#f2e3da 0%,#fbf7f2 65%,#eadfd7 100%)}
@@ -191,7 +191,7 @@ button:disabled:not(.answer){opacity:.42}
 .feature-topics span{padding:6px 10px;border:1px solid #cdbfc7;border-radius:999px;background:#fff8;color:#57424f;font-size:11px;font-weight:700;letter-spacing:.15px}
 .feature-symbol{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#fff9;color:var(--plum);font-size:22px}
 .feature-entry{display:inline-flex;align-items:center;justify-content:center;margin-top:14px;padding:14px 18px;border-radius:13px;background:var(--plum);color:#fff;font-weight:700}
-.feature-entry:hover{background:#492c3d}
+.feature-entry:hover{background:#51203a}
 .feature-entry[aria-pressed="true"]{display:none}
 .quiz-feature .play-area,.celebrity-section .play-area{width:100%}
 .quiz-feature .sheet{min-height:470px}
@@ -285,35 +285,35 @@ dialog h2{margin-top:0;font-size:24px}
 
 /* Ενημερωμένη εμφάνιση */
 html{overflow-x:clip}
-body{background:#faf7f2;overflow-x:clip}
+body{background:#fcf8fa;overflow-x:clip}
 body .page {
   max-width: 1500px;
 }
 body .workspace{grid-template-columns:340px minmax(0,1fr);gap:32px}
-body .workspace>.sidebar{background:#f4eee5;border:1px solid #e0d5c9;box-shadow:none;border-radius:22px}
+body .workspace>.sidebar{background:#f3e8ee;border:1px solid #dfcfd8;box-shadow:none;border-radius:22px}
 body .workspace .welcome h1{font-size:32px;line-height:1.28}
-body .workspace .mode.exam,body .workspace .mode.study,body .workspace .mode.archive{background:#fffdf9;border-color:#e2d7d0;box-shadow:none}
-body .workspace .mode[aria-pressed=true]{background:#ece1e8;border-color:#a07b90;box-shadow:inset 3px 0 var(--plum)}
+body .workspace .mode.exam,body .workspace .mode.study,body .workspace .mode.archive{background:#fffafb;border-color:#e4d2dc;box-shadow:none}
+body .workspace .mode[aria-pressed=true]{background:#ead5e1;border-color:#a65d83;box-shadow:inset 3px 0 var(--plum)}
 body .workspace .notebook{background:transparent;border:0;border-top:1px solid #dfd3c9;border-radius:0;padding:20px 4px 0}
-body #stage{background:#fffdf9;border:1px solid #b79caa;box-shadow:0 16px 38px #53374710;border-radius:24px;padding:40px}
+body #stage{background:#fffafb;border:1px solid #c4a0b4;box-shadow:0 16px 38px #53374710;border-radius:24px;padding:40px}
 body #stage:has(> .intro) {
   min-height: 420px;
-  background: #f0e5ec;
+  background: #f0e0ea;
   display: flex;
   align-items: stretch;
 }
 body #stage::before{height:5px;background:var(--plum)}
 body #stage>.intro{width:100%;max-width:none;padding:12px 0;display:flex;flex-direction:column;justify-content:center}
-body #stage>.intro .exam-lead{max-width:620px;margin:0 auto;text-align:center;font-family:var(--body);font-size:24px;font-weight:500;line-height:1.6;letter-spacing:-.45px;text-wrap:balance;color:#49323f}
-body #stage .exam-choice-panel{width:100%;max-width:none;margin-top:32px;padding:28px;background:#fffdf9;border:1px solid #cbb7c3;border-radius:16px;box-shadow:0 5px 18px #53374708}
+body #stage>.intro .exam-lead{max-width:620px;margin:0 auto;text-align:center;font-family:var(--body);font-size:24px;font-weight:500;line-height:1.6;letter-spacing:-.45px;text-wrap:balance;color:#542039}
+body #stage .exam-choice-panel{width:100%;max-width:none;margin-top:32px;padding:28px;background:#fffafb;border:1px solid #cbb7c3;border-radius:16px;box-shadow:0 5px 18px #53374708}
 body #stage .exam-choice-panel #examCount{max-width:none;min-height:56px;background:#f8f4f6}
 body #stage .exam-choice-panel .start-selected{width:100%;min-height:52px;margin-top:20px;box-shadow:none}
 body .sheet-heading[hidden]{display:none}
-body .daily-section{background:#f5eee1;border:1px solid #e5d8bf;box-shadow:none;border-radius:6px 20px 20px 20px}
-body .daily-section::before{background:#e5d1a7;color:#654f36;box-shadow:none}
+body .daily-section{background:#f5e9e1;border:1px solid #e5cbbb;box-shadow:none;border-radius:6px 20px 20px 20px}
+body .daily-section::before{background:#ead0be;color:#654f36;box-shadow:none}
 body .beauty-break{width:100vw;margin-top:48px;margin-bottom:48px;box-shadow:none}
 body .beauty-break img{height:300px;object-position:center 57%}
-body .quiz-feature,body .celebrity-section{background:#fffdf9;border:1px solid #e3d9d2;box-shadow:0 8px 30px #48363f05;border-radius:24px;margin:24px 0;padding:36px 40px;gap:32px;grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr)}
+body .quiz-feature,body .celebrity-section{background:#fffafb;border:1px solid #e4d2dc;box-shadow:0 8px 30px #48363f05;border-radius:24px;margin:24px 0;padding:36px 40px;gap:32px;grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr)}
 body .quiz-feature-head,body .celebrity-section-head{padding:0}
 body .quiz-feature-head h2,body .celebrity-section-head h2{font-size:36px;line-height:1.25;letter-spacing:-.8px;margin:12px 0}
 body .quiz-feature-head p,body .celebrity-section-head p{font-size:16px;line-height:1.8;max-width:580px}
@@ -332,11 +332,11 @@ body .celebrity-section{border-top:3px solid #ae8198;align-items:center}
 body .celebrity-section:has(#casualStage>.intro) #casualStage{min-height:0;background:#f5edf2;box-shadow:none;padding:32px;text-align:center}
 body .celebrity-section:has(#casualStage>.intro) #casualStage .intro{padding:0}
 body .quiz-feature .sheet,body .celebrity-section .sheet{min-height:0;border:1px solid #e7ddd7;border-radius:18px;box-shadow:none}
-body .daily-challenge{background:#49323f;border-radius:24px;margin:48px 0;padding:40px;gap:36px;box-shadow:none}
+body .daily-challenge{background:#542039;border-radius:24px;margin:48px 0;padding:40px;gap:36px;box-shadow:none}
 body .daily-challenge h2{font-size:32px;line-height:1.35}
 body .daily-challenge-card{box-shadow:none;border-radius:18px;padding:24px}
 body .daily-challenge-option:disabled{opacity:1}
-body .support{background:#f0e7dc;border:1px solid #e3d5c5;border-radius:20px}
+body .support{background:#f1e1e9;border:1px solid #dec4d2;border-radius:20px}
 body .primary,body .feature-entry{transition:background .18s,transform .18s,box-shadow .18s}
 body .primary:hover,body .feature-entry:hover{transform:translateY(-2px);box-shadow:0 6px 15px #603c5120}
 
@@ -373,7 +373,7 @@ body .page {
 /* Πιο συμπαγές πλαίσιο ΕΟΠΠΕΠ */
 body #stage:has(> .intro) {
   min-height: 420px;
-  background: #f0e5ec;
+  background: #f0e0ea;
   display: flex;
   align-items: stretch;
 }
