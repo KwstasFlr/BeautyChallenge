@@ -1,6 +1,7 @@
+:root{color-scheme:only light}
 :root{
   --paper:#fffafb;--ink:#963e5c;--muted:#963e5c;--plum:#963e5c;
-  --lilac:#fffafb;--peach:#fffafb;--sage:#fffafb;--#fffafb:#fffafb;
+  --lilac:#fffafb;--peach:#fffafb;--sage:#fffafb;--white:#fffafb;
   --body:"Noto Sans",Arial,sans-serif;--title:"Noto Serif",Georgia,serif
 }
 *{box-sizing:border-box}
@@ -96,7 +97,7 @@ h1{font-size:30px;line-height:1.4;letter-spacing:-.7px;margin:13px 0}
 .sheet-heading{display:flex;justify-content:space-between;gap:12px;padding:0 7px;margin-bottom:14px;font-size:13px}
 .sheet-heading>span:first-child{font-weight:600}
 .sheet-heading>span:last-child{color:var(--muted)}
-.sheet{background:var(--#fffafb);border-radius:26px;padding:36px;min-height:590px;box-shadow:0 15px 40px #963e5c07;scroll-margin-top:20px}
+.sheet{background:var(--white);border-radius:26px;padding:36px;min-height:590px;box-shadow:0 15px 40px #963e5c07;scroll-margin-top:20px}
 .sheet h2{font-size:28px;line-height:1.45;letter-spacing:-.5px;margin:20px 0 25px}
 .question-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px}
 .tag{display:inline-block;background:#fffafb;color:var(--plum);border-radius:8px;padding:5px 10px;font-size:12px;font-weight:600}
@@ -141,7 +142,7 @@ button:disabled:not(.answer){opacity:.42}
 .review p,.study-card p{font-size:14px}
 .mark{color:var(--plum);margin-right:8px}
 .study-card label{display:block;font-size:13px;font-weight:600;margin:18px 0 7px}
-.study-card textarea{display:block;width:100%;resize:vertical;border:0;border-radius:10px;background:var(--#fffafb);padding:13px;color:var(--ink);font-size:14px}
+.study-card textarea{display:block;width:100%;resize:vertical;border:0;border-radius:10px;background:var(--white);padding:13px;color:var(--ink);font-size:14px}
 .study-card small{display:block;font-size:12px;color:var(--muted);margin-top:7px}
 .history-card{display:flex;align-items:center;justify-content:space-between;gap:15px;background:#fffafb;padding:18px;border-radius:13px;margin-top:12px}
 .history-card strong{font-size:14px}
@@ -217,10 +218,10 @@ button:disabled:not(.answer){opacity:.42}
 .support h2{font-size:21px;margin:0 0 5px}
 .support p{font-size:14px;color:var(--muted);margin:0}
 .support-demo{display:inline-block;margin-bottom:7px;padding:4px 8px;border-radius:7px;background:#fffafb;color:#963e5c;font-size:10px;font-weight:800;letter-spacing:1.1px}
-.donate{margin-left:auto;background:var(--#fffafb);#fffafb-space:nowrap}
+.donate{margin-left:auto;background:var(--white);white-space:nowrap}
 footer{display:flex;justify-content:space-between;gap:18px;padding:27px 5px 5px;font-size:12px;color:var(--muted)}
 .heart{color:var(--plum);font-size:17px;vertical-align:middle;margin-left:4px}
-dialog{max-width:470px;width:calc(100% - 32px);border:0;border-radius:22px;background:var(--#fffafb);color:var(--ink);padding:28px}
+dialog{max-width:470px;width:calc(100% - 32px);border:0;border-radius:22px;background:var(--white);color:var(--ink);padding:28px}
 dialog::backdrop{background:#963e5c70}
 dialog h2{margin-top:0;font-size:24px}
 @keyframes bloom{from{opacity:0;transform:scale(.65) rotate(-30deg)}to{opacity:1;transform:scale(1) rotate(0)}}
@@ -385,7 +386,7 @@ body #stage:has(> .intro) {
 }
 
 /* Soft rose, warm #fffafb and lavender, with distinct quiz cards. */
-:root{--paper:#fffafb;--ink:#963e5c;--muted:#963e5c;--plum:#963e5c;--lilac:#fffafb;--peach:#fffafb;--sage:#fffafb;--#fffafb:#fffafb}
+:root{--paper:#fffafb;--ink:#963e5c;--muted:#963e5c;--plum:#963e5c;--lilac:#fffafb;--peach:#fffafb;--sage:#fffafb;--white:#fffafb}
 body{background:linear-gradient(145deg,#fffafb,#fffafb 55%,#fffafb)}
 body .workspace>.sidebar{background:#fffafb;border-color:#fffafb}
 body #stage,body #stage:has(>.intro){background:#fffafb;border-color:#fffafb}
